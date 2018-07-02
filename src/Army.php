@@ -25,17 +25,6 @@ class Army
         $this->units[] = $unit;
     }
 
-    public function getTotalHealth(): int
-    {
-        $totalHealth = 0;
-
-        foreach ($this->units as $unit) {
-            $totalHealth += $unit->getHealth();
-        }
-
-        return $totalHealth;
-    }
-
     public function strike(Army $army): bool
     {
         return $this->tactics->strike($this, $army);
