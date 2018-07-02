@@ -39,4 +39,16 @@ class Army
     {
         return $this->name;
     }
+    
+    public function getTotalHealth(): int
+    {
+        $totalHealth = 0;
+
+        foreach ($this->units as $unit) {
+            $totalHealth += $unit->getHealth();
+        }
+
+        return $totalHealth;
+    }
+
 }
