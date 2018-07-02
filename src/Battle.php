@@ -41,7 +41,7 @@ class Battle
         return new Result($this->army1, $this->army2);
     }
 
-    public function isTurn(Army $army): bool
+    private function isTurn(Army $army): bool
     {
         return $this->turn === $army;
     }
